@@ -1,0 +1,195 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* VARIABLES CSS */
+:root {
+  /* Colors  */
+  --color-earth: #a0a0a0;
+  --color-mars: #e8e8e8;
+  --color-venus: #fff;
+  --color-sun: #ffbf00;
+  --color-mercury: #fa5f55;
+  --color-saturn: #000;
+
+  /* Font and typography  */
+  --body-font: 'Montserrat', sans-serif;
+}
+
+body,
+input {
+  font-family: var(--body-font);
+}
+
+/* PAGE TABS */
+.tabs {
+  min-width: 300px;
+}
+
+.tabs [type='radio'] {
+  display: none;
+}
+
+.tabLabel {
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  color: var(--color-earth);
+  height: auto;
+  padding: 20px 0px;
+  width: 150px;
+}
+
+.tabLabel:hover {
+  color: var(--color-saturn);
+  cursor: pointer;
+}
+
+.content {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  height: calc(100vh - 105px);
+  left: 0;
+  background: var(--color-venus);
+  padding: 20px;
+  display: none;
+  overflow: auto;
+}
+
+#slider {
+  display: inline-block;
+  padding: 20px 0px;
+}
+
+#slider {
+  background-color: transparent;
+  position: absolute;
+  border-bottom: 3px solid var(--color-saturn);
+  margin: 7px 10px;
+  transition: transform 0.5s;
+  width: 130px;
+}
+
+[type='radio'],
+#login:checked ~ #slider {
+  transform: translate(-300px, 0px);
+}
+
+[type='radio'],
+#signup:checked ~ #slider {
+  transform: translate(-150px, 0px);
+}
+
+[type='radio']:checked + .tabLabel {
+  color: var(--color-saturn);
+}
+
+[type='radio']:checked + .tabLabel + .content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* PAGE FOOTER */
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: var(--color-mars);
+  width: 100%;
+  left: 0;
+  height: 55px;
+}
+
+footer button {
+  position: absolute;
+  right: 1.5rem;
+  top: -1.2rem;
+  border: none;
+  outline: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  color: var(--color-venus);
+}
+
+.login-content button {
+  background-color: var(--color-sun);
+}
+.signup-content button {
+  background-color: var(--color-mercury);
+}
+
+/* FORM */
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  margin-bottom: 3rem;
+}
+
+.header-heading {
+  font-size: 2rem;
+}
+
+.header-desc {
+  font-weight: 500;
+  margin-top: 0.7rem;
+}
+
+.input-container {
+  position: relative;
+  margin: 1rem 0 25px 0;
+}
+
+.input-container label {
+  color: var(--color-earth);
+  position: absolute;
+  cursor: text;
+  transform: translateY(-25px);
+  transition: transform 0.3s ease;
+  left: 0;
+  bottom: -15px;
+}
+
+.input-container input {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  transition: 0.6s;
+  border: none;
+  border-bottom: 1px solid var(--color-earth);
+  background-color: transparent;
+}
+
+.input-container input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--color-saturn);
+}
+
+/* Input Animation Styles */
+.animation label {
+  transform: translateY(-55px);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.animation-color label {
+  color: var(--color-saturn);
+}
+
+.content-social {
+  font-size: 1.5rem;
+}
+.content-social i:first-child {
+  margin-right: 0.8rem;
+}

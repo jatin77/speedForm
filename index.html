@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- FONT AWESOME ICONS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Form UI</title>
+  </head>
+  <body>
+    <div class="tabs">
+      <!-- TAB ONE -->
+      <input type="radio" id="login" name="tab" checked />
+      <label class="tabLabel" for="login">Login</label>
+      <!-- TAB ONE LOGIN FORM -->
+      <div class="content login-content">
+        <main>
+          <header>
+            <p class="header-heading">Welcome Back,<br /><b>@codefreeze</b></p>
+          </header>
+          <div class="input-container">
+            <input type="text" id="login-email" class="form-input" />
+            <label for="login-email" unselectable="on">Email address</label>
+          </div>
+          <div class="input-container">
+            <input type="password" id="login-password" class="form-input" />
+            <label for="login-password" unselectable="on">Password</label>
+          </div>
+          <div class="content-social">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-google-plus-g"></i>
+          </div>
+        </main>
+        <p><b>Forgot password?</b></p>
+        <footer>
+          <button><i class="fas fa-long-arrow-alt-right"></i></button>
+        </footer>
+      </div>
+      <!-- TAB TWO -->
+      <input type="radio" id="signup" name="tab" />
+      <label class="tabLabel" for="signup">Sign Up</label>
+      <!-- TAB ONE SIGNUP FORM -->
+      <div class="content signup-content">
+        <main>
+          <header>
+            <p class="header-heading">Hello <b>Nomad,</b></p>
+            <p class="header-desc">
+              Enter your information below or login with social account
+            </p>
+          </header>
+          <div class="input-container">
+            <input type="text" id="signup-email" class="form-input" />
+            <label for="signup-email" unselectable="on">Email address</label>
+          </div>
+          <div class="input-container">
+            <input type="password" id="signup-password" class="form-input" />
+            <label for="signup-password" unselectable="on">Password</label>
+          </div>
+          <div class="input-container">
+            <input
+              type="password"
+              id="signup-confirmPassword"
+              class="form-input"
+            />
+            <label for="signup-confirmPassword" unselectable="on"
+              >Confirm Password</label
+            >
+          </div>
+          <div class="content-social">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-google-plus-g"></i>
+          </div>
+        </main>
+        <footer>
+          <button><i class="fas fa-long-arrow-alt-right"></i></button>
+        </footer>
+      </div>
+      <!-- TAB SLIDER -->
+      <div id="slider"></div>
+      <!-- JQuery CDN -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <!-- JS  -->
+      <script src="./script.js"></script>
+    </div>
+  </body>
+</html>
